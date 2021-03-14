@@ -1,0 +1,66 @@
+.registration-form {
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  margin: 10% auto;
+  border: 2px solid rgba(65, 12, 126, 0.7);
+  border-radius: 5px;
+  padding: 20px 15px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#62278073), color-stop(#5c45c742), to(#a681ff0a));
+  background-image: linear-gradient(180deg, #62278073, #5c45c742, #a681ff0a);
+}
+
+.registration-form .form-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registration-form .form-body input {
+  height: 40px;
+  margin: 10px;
+  padding-left: 15px;
+  border: 2px solid rgba(65, 12, 126, 0.7);
+  border-radius: 15px;
+  outline: none;
+  font-size: 17px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.registration-form .form-body input:focus {
+  -webkit-box-shadow: 0 0 10px -1px #399cea;
+          box-shadow: 0 0 10px -1px #399cea;
+  border: 3px solid rgba(96, 96, 193, 0.7);
+}
+
+.registration-form .form-footer {
+  position: relative;
+  margin: 20px 0;
+}
+
+.registration-form .form-footer button {
+  padding: 15px;
+  background: transparent;
+  border: 2px solid rgba(65, 12, 126, 0.7);
+  outline: none;
+}
+
+.registration-form .form-footer button:hover {
+  border: 3px solid #6060c1;
+}
+
+.registration-form .form-footer button:focus {
+  border: 3px solid #6060c1;
+}
+
+.registration-form .form-footer .link-to-login {
+  position: absolute;
+  right: 0;
+  top: 11px;
+}
+/*# sourceMappingURL=RegistrationForm.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,EAAC,IAAI,CAAA;EACL,MAAM,EAAE,IAAI;CACf;;AACD,AAAA,IAAI,EAAC,KAAK,CAAA;EACN,UAAU,EAAE,SAAS;CACxB",
+    "sources": [
+        "../SassFiles/PagesStyle/Sign-in-up.scss"
+    ],
+    "names": [],
+    "file": "Sign-in-up.css"
+}
