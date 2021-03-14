@@ -1,0 +1,100 @@
+
+.main-page{
+    height: 100%;
+    .header{
+        height: 80px;
+        padding: 15px 5px;
+        display: flex;
+        .mb-3{
+            max-width: 400px;
+            margin: auto;
+        }
+        .user-avatar img{
+            border-radius: 50%;
+            height: 50px;
+        }
+    }
+    aside{
+        background:transparent;
+        border: 1px solid #6060c1;
+        border-right:none;
+        height: calc(100% - 80px);
+        float: left;
+        padding: 20px;
+    }
+
+    .files-container{
+        background: transparent;
+        border: 1px solid #6060c1;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100% - 80px);
+        padding: 15px;
+        .files-container-header{
+            display: flex;
+            justify-content: space-between;
+            .settings-btns{
+                display: flex;
+                .fas{
+                    margin: auto 10px auto 0;
+                    display: none;
+                }
+                .fas:hover{
+                    cursor: pointer;
+                }
+                .fas:hover:before{
+                    color:gray
+                }
+            }
+        }
+        .files-container-content{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            .file-icon{
+                height: 50px;
+               
+            }
+            .file-item{
+                width: fit-content;
+                text-align: center;
+                margin-right: 15px;
+            }
+        }
+      
+    }
+}
+@media screen and (max-width:509px) {
+    .main-page{
+        aside{
+            display: none;
+        }
+        .files-container{
+            .files-container-header{
+                .settings-btns{
+                    .fas{
+                        margin: auto 10px auto 0;
+                        display: block;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .main-page{
+        .header{
+            .user-avatar{
+                display: none;
+            }
+        }
+    }
+}
+
+#root{
+    height: 100%;
+}
+
+
