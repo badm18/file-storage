@@ -18,7 +18,6 @@ export const RegistrationForm = () => {
     return (
 
         <div className="registration-form">
-            {console.log(inputInfo)}
             <form action="">
                 <div className="form-header">
                     <h2>Форма регистрации</h2>
