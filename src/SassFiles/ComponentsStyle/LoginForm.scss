@@ -31,7 +31,7 @@
 }
 .form-footer{
     position: relative;
-    margin: 20px 0;
+    margin: 36px 0;
     button{
         padding: 15px;
         background: transparent;
@@ -43,6 +43,12 @@
     }
     button:focus{
         border: 3px solid #6060c1;
+    }
+    .link-to-registration{
+        position: absolute;
+        right: 0;
+        top: 18px;
+        
     }
   
 }

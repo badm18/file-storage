@@ -16,7 +16,8 @@ export const LoginForm = () => {
                     <input type="password" className="form-body-item" placeholder="Введите ваш пароль" required />
                 </div>
                 <div className="form-footer">
-                <Link to="/mainPage">  <button type="submit">Войти</button></Link>
+                <Link to="/mainPage"><button type="submit">Войти</button></Link>
+                <Link className="link-to-registration" to='/registration'>Зарегистрироваться</Link>
                 </div>
             </form>
         </div>
