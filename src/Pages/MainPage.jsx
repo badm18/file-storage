@@ -1,5 +1,7 @@
 import React from 'react'
 import '../CssFiles/Mainpage.css'
+import Drawer from 'react-md/lib/Drawers'
+
 import { InputGroup, FormControl, Button, Dropdown, DropdownButton } from 'react-bootstrap'
 
 
@@ -23,11 +25,11 @@ export const MainPage = () => {
                     <img src="https://memepedia.ru/wp-content/uploads/2018/07/dhcjnoixcaif23m.jpg" alt="аватарка" />
                 </div>
             </header>
-            <aside>
+            <Drawer tabletMinWidth='400'>
                 <Button variant="primary" size="lg">
                     Загрузить
                 </Button>
-            </aside>
+            </Drawer>
             <div className="files-container">
                 <div className="files-container-header">
                     <h3>Файлы</h3>
