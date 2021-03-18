@@ -1,4 +1,4 @@
-
+@include react-md-drawers;
 .main-page{
     height: 100%;
     .header{
@@ -54,7 +54,6 @@
             margin-top: 25px;
             .file-icon{
                 height: 50px;
-               
             }
             .file-item{
                 width: fit-content;
@@ -91,10 +90,6 @@
             }
         }
     }
-}
-
-#root{
-    height: 100%;
 }
 
 

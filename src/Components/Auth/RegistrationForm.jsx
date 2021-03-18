@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../CssFiles/RegistrationForm.css'
+import '../../CssFiles/RegistrationForm.css'
 
 
 export const RegistrationForm = () => {
