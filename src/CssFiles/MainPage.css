@@ -21,12 +21,23 @@
 }
 
 .main-page aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: transparent;
   border: 1px solid #6060c1;
   border-right: none;
   height: calc(100% - 80px);
   float: left;
   padding: 20px;
+}
+
+.main-page aside .btn {
+  margin-top: 10px;
 }
 
 .main-page .files-container {
@@ -110,8 +121,4 @@
     display: none;
   }
 }
-
-#root {
-  height: 100%;
-}
-/*# sourceMappingURL=Mainpage.css.map */
+/*# sourceMappingURL=MainPage.css.map */

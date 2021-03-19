@@ -1,0 +1,19 @@
+.folder-name-input{
+    padding-left: 15px;
+    height: 41px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #6060c1;
+    border-radius: 10px;
+}
+.error-message{
+    display: none;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+  }
+.folder-name-input:focus{
+    box-shadow: 0 0 10px -1px #399cea;
+    border: 3px solid rgba($color: #6060c1, $alpha: 0.7);
+}
+

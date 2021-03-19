@@ -1,4 +1,4 @@
-@include react-md-drawers;
+
 .main-page{
     height: 100%;
     .header{
@@ -15,12 +15,17 @@
         }
     }
     aside{
+        display:flex;
+        flex-direction: column;
         background:transparent;
         border: 1px solid #6060c1;
         border-right:none;
         height: calc(100% - 80px);
         float: left;
         padding: 20px;
+        .btn{
+            margin-top: 10px;
+        }
     }
 
     .files-container{

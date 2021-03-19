@@ -1,15 +1,22 @@
 import React from 'react'
-import '../CssFiles/Mainpage.css'
+import '../CssFiles/MainPage.css'
 import Drawer from 'react-md/lib/Drawers'
-
+import { Link } from 'react-router-dom'
 import { InputGroup, FormControl, Button, Dropdown, DropdownButton } from 'react-bootstrap'
+import { FolderCreateModal } from '../Components/ModalWindows/FolderCreate'
+import { useDispatch, useSelector } from 'react-redux';
+import { FileFolder } from '../Redux/Reducers/FilesFoldresReducer'
+import { UploadFile } from '../Components/ModalWindows/UploadFile'
 
 
-export const MainPage = () => {
+export const MainPage = ({ id = '0' }) => {
 
+    const fileFolder = useSelector(FileFolder)
 
     return (
         <div className="main-page">
+            {/* {console.log(id)} */}
+            {console.log(fileFolder)}
             <header className="header">
                 <InputGroup className="mb-3">
                     <FormControl
@@ -26,9 +33,8 @@ export const MainPage = () => {
                 </div>
             </header>
             <Drawer tabletMinWidth='400'>
-                <Button variant="primary" size="lg">
-                    Загрузить
-                </Button>
+                <UploadFile parent={id} />
+                <FolderCreateModal parent={id} />
             </Drawer>
             <div className="files-container">
                 <div className="files-container-header">
@@ -43,6 +49,42 @@ export const MainPage = () => {
                     </div>
                 </div>
                 <div className="files-container-content">
+
+                    {/* Вывод папок в зависимости от текущего id */}
+
+
+
+                    { 
+                        fileFolder.folders.filter(item => item.parent_folder === id).map(i =>
+                            <Link className="link-to-folder" to={`/mainPage/folder/${i.id}`}>
+                                <div className="file-item">
+                                    <img src="https://c0.klipartz.com/pngpicture/547/938/gratis-png-equipo-iconos-icono-diseno-apple-icono-formato-carpeta-amarilla-s.png" alt="папка" className="file-icon" />
+                                    <p className="file-name">{i.name}</p>
+                                </div>
+                            </Link>
+                        )
+                    }
+
+                    {
+                    fileFolder.files.id.map(i =>
+                        <div className="file-item">
+                            <img src="https://img2.freepng.ru/20180320/zew/kisspng-computer-icons-filename-extension-image-file-forma-file-format-png-icon-5ab089deeeb233.7263924815215190709777.jpg" alt="файл" className="file-icon" />
+                            <p className="file-name">{i.name}.txt</p>
+                        </div>
+                    )}
+
+
+
+                    {/* {fileFolder.folders.map(i =>
+                        <Link className="link-to-folder" to={`/mainPage/folder/${i.id}`}>
+                            <div className="file-item">
+                                <img src="https://c0.klipartz.com/pngpicture/547/938/gratis-png-equipo-iconos-icono-diseno-apple-icono-formato-carpeta-amarilla-s.png" alt="" className="file-icon" />
+                                <p className="file-name">{i.name}</p>
+                            </div>
+                        </Link>
+                    )
+
+                    } */}
                     <div className="file-item">
                         <img src="https://img2.freepng.ru/20180320/zew/kisspng-computer-icons-filename-extension-image-file-forma-file-format-png-icon-5ab089deeeb233.7263924815215190709777.jpg" alt="" className="file-icon" />
                         <p className="file-name">Название файла.txt</p>
