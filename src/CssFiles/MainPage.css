@@ -106,6 +106,12 @@
   margin-right: 15px;
 }
 
+.main-page .files-container .files-container-content .if-page-empty {
+  margin-top: 20%;
+  color: #636363;
+  text-align: center;
+}
+
 @media screen and (max-width: 509px) {
   .main-page aside {
     display: none;

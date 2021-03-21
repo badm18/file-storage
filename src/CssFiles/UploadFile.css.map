@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../Components/ModalWindows/UploadFile.scss"
+    ],
+    "names": [],
+    "file": "UploadFile.css"
+}
