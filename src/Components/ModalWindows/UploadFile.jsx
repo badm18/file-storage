@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { add } from '../../Redux/Reducers/FilesFoldresReducer'
 
 export const UploadFile = ({ parent }) => {
@@ -13,16 +13,15 @@ export const UploadFile = ({ parent }) => {
     const handleShow = () => setShow(true);
     //Проверка наличия файла который надо загрузить
     const uploadFile = () => {
-      
 
-        let date = new Date()
+
         dispatch(add({
             id: Date.now().toString(),
             type: 'file',
             name: 'яавидео',
-            format:'.mp4',
+            format: '.mp4',
             parent_folder: parent,
-            date_of_upload: date.toISOString(),
+            date_of_upload: new Date().toLocaleString(),
             file_weight: '300kb',
             name_of_uploader: 'Mikhail',
             number_of_download: 20,
@@ -31,9 +30,9 @@ export const UploadFile = ({ parent }) => {
             id: Date.now().toString(),
             type: 'file',
             name: Date.now().toString(),
-            format:'.txt',
+            format: '.txt',
             parent_folder: parent,
-            date_of_upload: date.toISOString(),
+            date_of_upload: new Date().toLocaleString(),
             file_weight: '300kb',
             name_of_uploader: 'Mikhail',
             number_of_download: 20,
@@ -42,14 +41,14 @@ export const UploadFile = ({ parent }) => {
             id: Date.now().toString(),
             type: 'file',
             name: 'акартинка',
-            format:'.png',
+            format: '.png',
             parent_folder: parent,
-            date_of_upload: date.toISOString(),
+            date_of_upload: new Date().toLocaleString(),
             file_weight: '300kb',
             name_of_uploader: 'Mikhail',
             number_of_download: 20,
         }))
-    
+
         setShow(false);
     }
 

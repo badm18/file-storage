@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap';
 import '../../CssFiles/FolderCreate.css'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { add } from '../../Redux/Reducers/FilesFoldresReducer'
 
 export const FolderCreateModal = ({parent="0"}) => {
@@ -15,18 +15,17 @@ export const FolderCreateModal = ({parent="0"}) => {
     //Проверка наличия имени папки и добавление стилей
     const isInputEmpty = () => {
         let errorBlock = document.querySelector('.error-message');
-        if (inputVal === '') {
+        if (inputVal.trim() === '') {
             errorBlock.style.display = "block"
         } else {
             errorBlock.style.display = "none"
             setInputVal('');
-            let date =  new Date()
             dispatch(add({
                 id: Date.now().toString(),
                 type: 'folder',
                 name: inputVal,
                 parent_folder: parent,
-                date_of_creation: date.toISOString()
+                date_of_upload: new Date().toLocaleString()
             }))
             setShow(false);
         }
