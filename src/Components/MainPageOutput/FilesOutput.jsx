@@ -4,9 +4,9 @@ import { FileFolder } from '../../Redux/Reducers/FilesFoldresReducer'
 import { Draggable } from 'react-beautiful-dnd';
 import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 
-export const FilesOutput = ({ id }) => {
+export const FilesOutput = ({id} ) => {
     const fileFolder = useSelector(FileFolder)
-
+ 
     const renderTooltip = (props) => (
         <Tooltip id="file-foldertooltip" >
             {
@@ -23,9 +23,11 @@ export const FilesOutput = ({ id }) => {
     return (
         <>
             {
+                
                 fileFolder.files[id] &&
                 fileFolder.files[id].map((i, index) =>
                     <Draggable key={i.id} draggableId={i.id} index={index} >
+                      
                         {(provided) => (
                             <OverlayTrigger
                                 key={i.id}

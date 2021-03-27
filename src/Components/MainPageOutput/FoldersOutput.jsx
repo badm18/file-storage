@@ -5,15 +5,18 @@ import { Link } from 'react-router-dom'
 import { Droppable } from 'react-beautiful-dnd';
 
 
-export const FoldersOutput = ({ id }) => {
+export const FoldersOutput = ({id}) => {
     const fileFolder = useSelector(FileFolder)
-
+    console.log('Folder: ',id)
     return (
+        
         <>
             {
+                 
                 fileFolder.folders[id] &&
                 fileFolder.folders[id].map(i =>
                     <Link className="link-to-folder" to={`/mainPage/folder/${i.id}`}>
+                      
                         <Droppable droppableId={i.id} isCombineEnabled={true}>
                             {(provided) => (
                                 <div className="file-item" key={i.id} {...provided.droppableProps} ref={provided.innerRef} >

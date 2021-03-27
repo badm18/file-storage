@@ -137,8 +137,8 @@ export const MainPage = ({ id = '0' }) => {
 
     return (
         <div className="main-page">
-            {/* {console.log(id)} */}
-            {/* {console.table(fileFolder.files)} */}
+            {/* {console.log('mainPage: ',id)} */}
+            {/* {console.log(fileFolder)} */}
             <header className="header">
                 <InputGroup className="mb-3">
                     <FormControl
